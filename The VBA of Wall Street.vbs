@@ -82,7 +82,7 @@ Sub WallStreetAnalysis():
                     PercentChange = YearlyChange / YearlyOpen
                 End If
 
-                ' Format Double To Include % Symbol And Two Decimal Places
+                ' Format Percent Change
                 ws.Range("K" & SummaryTableRow).NumberFormat = "0.00%"
                 ws.Range("K" & SummaryTableRow).Value = PercentChange
 
@@ -101,7 +101,7 @@ Sub WallStreetAnalysis():
 
 ' Hard Solution
 
-            ' Greatest % Increase, Greatest % Decrease and Greatest Total Volume
+            ' Greatest % Increase, Greatest % Decrease & Greatest Total Volume
             LastRow = ws.Cells(Rows.Count, 11).End(xlUp).Row
         
             ' Start Loop For Final Results
@@ -122,7 +122,7 @@ Sub WallStreetAnalysis():
                 End If
             Next i
 
-            ' Format
+            ' Format Greatest % Increase & Greatest % Decrease
             ws.Range("Q2").NumberFormat = "0.00%"
             ws.Range("Q3").NumberFormat = "0.00%"
             
